@@ -1,0 +1,43 @@
+1.Explain the difference between FIFO and Capacity scheduler
+
+  There are many differences between FIFO and Capacity scheduler.They are :
+         
+ * In FIFO scheduling the jobs are taken from the work queue.
+ * Whereas in capacity scheduling several queues are created,with each having a number of map and reduce tasks.
+ *In FIFO the jobs are taken in the order of oldest job first.
+ * In capacity scheduling each queue is assigned a capacity.These capacity of individual queue are added together to 
+     find the overall capacity of the cluster.
+ *THe FIFO scheduling does not consider the  size or the priority of the job.
+ * In FIFO if the old job is longer than the short jobs then the short job gets delayed till the long ones are executed.
+  *But in Capacity scheduler the shortest job are processed first followed by the longest one
+ * In FIFO there is poor utilization of the job queue and it has costly data replication.
+
+        
+ 2.What are the limitations of hadoop 1.x and how they were overcome in hadoop 2.x
+
+  The limitations of hadoop 1.x are:
+
+    * The major drawback of hadoop 1.x is that it supports only map reduce based batch and data processing.
+    * Hadoop 1.x does not supports horizontal scalability.
+    *Only one namenode is used in hadoop 1.x
+         If the name node fails then the entire cluster will fail which is called as the Single Point of failure(SPOF). 
+    * Hadoop 1.x is not suitable for real time data processing.
+
+          
+  Hadoop 2.x overcomes the limitation of hadoop 1.x by:
+
+   * Haddop 2.x maks use of  new YARN component.
+   * Hadoop 2.x provides high availability and high scalability.  
+   * Hadoop 2.x supports horizontal scalability which is not supported in hadoop 1.x.
+   * Hadoop 2.x supports the use of  multiple namenode and multiple name space.
+   * Hadoop 2.x includes several components such as resource manager component, node manager component and
+     application master component which helps it to overcome the limitations of hadoop 1.x.
+  * Hadoop 2.x decouples the mapreduce components responsibility into different components.
+           
+          
+
+          
+
+         
+
+         
